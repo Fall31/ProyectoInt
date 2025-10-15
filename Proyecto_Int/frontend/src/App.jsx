@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Registrar from "./pages/Registrar";
 import IniciarSesion from "./pages/IniciarSesion";
+import AgregarProducto from "./pages/AgregarProducto";
 import "./App.css";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
               <li><Link to="#">Usuarios</Link></li>
               <li><Link to="#">Configuración</Link></li>
               <li><Link to="#">Acerca de</Link></li>
+              <li><Link to="/agregar-producto">Agregar Productos</Link></li>
             </ul>
           </nav>
         </aside>
@@ -47,11 +49,11 @@ function App() {
             />
             <Route path="/registrar" element={<Registrar />} />
             <Route path="/iniciar-sesion" element={<IniciarSesion />} />
+            <Route path="/agregar-producto" element={<AgregarProducto />} />
           </Routes>
         </main>
       </div>
     </Router>
   );
 }
-//test
 export default App;
