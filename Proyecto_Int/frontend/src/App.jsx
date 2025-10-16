@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Registrar from "./pages/Registrar";
 import IniciarSesion from "./pages/IniciarSesion";
 import AgregarProducto from "./pages/AgregarProducto";
+import Catalogo from "./pages/Catalogo";
 import "./App.css";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
               <li><Link to="#">Configuración</Link></li>
               <li><Link to="#">Acerca de</Link></li>
               <li><Link to="/agregar-producto">Agregar Productos</Link></li>
+              <li><Link to="/catalogo">Catalogo Productos</Link></li>
             </ul>
           </nav>
         </aside>
@@ -50,6 +52,7 @@ function App() {
             <Route path="/registrar" element={<Registrar />} />
             <Route path="/iniciar-sesion" element={<IniciarSesion />} />
             <Route path="/agregar-producto" element={<AgregarProducto />} />
+            <Route path="/catalogo" element={<Catalogo />} />
           </Routes>
         </main>
       </div>
