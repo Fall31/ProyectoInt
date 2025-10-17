@@ -4,6 +4,7 @@ import Registrar from "./pages/Registrar";
 import IniciarSesion from "./pages/IniciarSesion";
 import AgregarProducto from "./pages/AgregarProducto";
 import Catalogo from "./pages/Catalogo";
+import ClienteCarrito from "./pages/CarritoCompras";
 import "./App.css";
 
 function App() {
@@ -24,26 +25,24 @@ function App() {
           <nav>
             <ul>
               <li><Link to="/">Inicio</Link></li>
-              <li><Link to="#">Usuarios</Link></li>
-              <li><Link to="#">Configuración</Link></li>
-              <li><Link to="#">Acerca de</Link></li>
               <li><Link to="/agregar-producto">Agregar Productos</Link></li>
               <li><Link to="/catalogo">Catalogo Productos</Link></li>
+              <li><Link to="/carrito">Carrito</Link></li>
             </ul>
           </nav>
         </aside>
 
         <main className="content">
-          <header className="header">
-            <Link to="/iniciar-sesion" className="login-btn">Iniciar sesión</Link>
-            <Link to="/registrar" className="register-btn">Registrar</Link>
-          </header>
 
           <Routes>
             <Route
               path="/"
               element={
                 <div>
+                  <header className="header">
+                    <Link to="/iniciar-sesion" className="login-btn">Iniciar sesión</Link>
+                    <Link to="/registrar" className="register-btn">Registrar</Link>
+                  </header>
                   <h1>Frontend React</h1>
                   <p>{mensaje}</p>
                 </div>
@@ -53,6 +52,7 @@ function App() {
             <Route path="/iniciar-sesion" element={<IniciarSesion />} />
             <Route path="/agregar-producto" element={<AgregarProducto />} />
             <Route path="/catalogo" element={<Catalogo />} />
+            <Route path="/carrito" element={<ClienteCarrito />} />
           </Routes>
         </main>
       </div>

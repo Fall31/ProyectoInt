@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './Registrar.css'
 import { useState } from 'react'
 import { supabase } from '../lib/supabaseClient'
@@ -50,21 +50,27 @@ function Registrar() {
   }
 
   return (
-    <div className="register-container">
-      <h2>Registro de Usuario</h2>
-      <form className="register-form" onSubmit={handleSubmit}>
-        <label>Nombre:</label>
-        <input name="nombre" type="text" placeholder="Ingresa tu nombre" required />
+    <div>
+      <header>
+        <Link to="/" className="back-btn">◄</Link>
+      </header>
+      <div className="register-container">
+        <h2>Registro de Usuario</h2>
+          <form className="register-form" onSubmit={handleSubmit}>
+            <label>Nombre:</label>
+            <input name="nombre" type="text" placeholder="Ingresa tu nombre" required />
 
-        <label>Correo:</label>
-        <input name="email" type="email" placeholder="Ingresa tu correo" required />
+            <label>Correo:</label>
+            <input name="email" type="email" placeholder="Ingresa tu correo" required />
 
-        <label>Contraseña:</label>
-        <input name="password" type="password" placeholder="Ingresa tu contraseña" required />
+            <label>Contraseña:</label>
+            <input name="password" type="password" placeholder="Ingresa tu contraseña" required />
 
-        <button type="submit" disabled={loading}>{loading ? 'Registrando...' : 'Registrar'}</button>
-      </form>
+            <button type="submit" disabled={loading}>{loading ? 'Registrando...' : 'Registrar'}</button>
+          </form>
+      </div>
     </div>
+    
   )
 }
 

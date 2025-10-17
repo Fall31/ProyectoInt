@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './IniciarSesion.css'
 import { supabase } from '../lib/supabaseClient'
 import { useState } from 'react'
@@ -39,7 +39,11 @@ function IniciarSesion() {
   }
 
   return (
-    <div className="login-container">
+    <div>
+      <header>
+        <Link to="/" className="back-btn">◄</Link>
+      </header>
+      <div className="login-container">
       <h2>Iniciar Sesión</h2>
       <form className="login-form" onSubmit={handleLogin}>
         <label>Correo:</label>
@@ -51,6 +55,8 @@ function IniciarSesion() {
         <button type="submit" disabled={loading}>{loading ? 'Ingresando...' : 'Iniciar sesión'}</button>
       </form>
     </div>
+    </div>
+    
   )
 }
 
