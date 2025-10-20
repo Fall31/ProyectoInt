@@ -1,0 +1,33 @@
+.ver-container {
+  padding: 30px;
+  color: #f2f2f2;
+  background-color: #181828;
+  min-height: 100vh;
+}
+
+.lista-articulos {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.articulo-card {
+  background-color: #22223a;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.articulo-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.articulo-card h4 {
+  margin-bottom: 5px;
+}
+
+.articulo-card small {
+  color: #aaa;
+}

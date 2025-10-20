@@ -5,6 +5,8 @@ import IniciarSesion from "./pages/IniciarSesion";
 import AgregarProducto from "./pages/AgregarProducto";
 import Catalogo from "./pages/Catalogo";
 import ClienteCarrito from "./pages/CarritoCompras";
+import PublicarArticulo from "./pages/PublicarArticulo";
+import VerArticulos from "./pages/Articulos";
 import "./App.css";
 
 function App() {
@@ -28,6 +30,9 @@ function App() {
               <li><Link to="/agregar-producto">Agregar Productos</Link></li>
               <li><Link to="/catalogo">Catalogo Productos</Link></li>
               <li><Link to="/carrito">Carrito</Link></li>
+              <li><Link to="/publicar">Publicar Artículo</Link></li>
+              <li><Link to="/articulos">Artículos</Link></li>
+
             </ul>
           </nav>
         </aside>
@@ -38,7 +43,7 @@ function App() {
             <Route
               path="/"
               element={
-                <div>
+                <div className="principal">
                   <header className="header">
                     <Link to="/iniciar-sesion" className="login-btn">Iniciar sesión</Link>
                     <Link to="/registrar" className="register-btn">Registrar</Link>
@@ -53,6 +58,9 @@ function App() {
             <Route path="/agregar-producto" element={<AgregarProducto />} />
             <Route path="/catalogo" element={<Catalogo />} />
             <Route path="/carrito" element={<ClienteCarrito />} />
+            <Route path="/publicar" element={<PublicarArticulo />} />
+            <Route path="/articulos" element={<VerArticulos />} />
+
           </Routes>
         </main>
       </div>

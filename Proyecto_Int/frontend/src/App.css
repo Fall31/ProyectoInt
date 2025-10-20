@@ -3,14 +3,24 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f5f6fa;
   color: #2f3640;
+  height: 100%;
+  padding: 0;
 }
-
+.content{
+  display: content;
+  align-items: flex-start;
+  margin-bottom: 100vh;
+  
+}
 .app-container {
-  display: flex;
-  height: 100vh;
+  display: contents;
+  padding: 20px;
+  color: fff;
+  justify-content: flex-start;
 }
 main{
   width: 160vh;
+  justify-content: start;
 }
 
 .sidebar {
